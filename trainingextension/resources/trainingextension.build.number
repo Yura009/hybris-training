@@ -1,0 +1,11 @@
+#Ant properties
+#Thu Dec 01 11:03:51 CET 2022
+version.api=2105
+vendor=hybris
+group.id=de.hybris.platform
+name=trainingextension
+description=trainingextension
+builddate=20221201 1103
+releasedate=20210809 2305
+version=2105.18
+module.name=platform-module
