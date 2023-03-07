@@ -6,9 +6,23 @@
 	ATTENTION: This is just an example file. You have to edit it according to your needs.
 -->
 
-<items 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-			xsi:noNamespaceSchemaLocation="items.xsd">
+<items xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="items.xsd">
 
-	<itemtypes>
-	</itemtypes>
+    <itemtypes>
+        <itemtype code="StoringProductRating">
+            <deployment table="StoringProductRating" typecode="12011"/>
+            <attributes>
+                <attribute qualifier="ratedValue" type="java.lang.Integer">
+                    <persistence type="property"/>
+                </attribute>
+                <attribute qualifier="ratedUser" type="User">
+                    <persistence type="property"/>
+                </attribute>
+                <attribute qualifier="ratedProduct" type="Product">
+                    <persistence type="property"/>
+                </attribute>
+            </attributes>
+        </itemtype>
+    </itemtypes>
 </items>
