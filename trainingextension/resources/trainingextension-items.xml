@@ -6,9 +6,16 @@
 	ATTENTION: This is just an example file. You have to edit it according to your needs.
 -->
 
-<items 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-			xsi:noNamespaceSchemaLocation="items.xsd">
+<items xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="items.xsd">
 
-	<itemtypes>
-	</itemtypes>
+    <itemtypes>
+        <itemtype code="MyProduct" extends="Product">
+            <attributes>
+                <attribute qualifier="code" type="java.lang.String" redeclare="true">
+                    <modifiers optional="true"/>
+                </attribute>
+            </attributes>
+        </itemtype>
+    </itemtypes>
 </items>
