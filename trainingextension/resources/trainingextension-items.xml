@@ -6,9 +6,22 @@
 	ATTENTION: This is just an example file. You have to edit it according to your needs.
 -->
 
-<items 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-			xsi:noNamespaceSchemaLocation="items.xsd">
+<items xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="items.xsd">
 
-	<itemtypes>
-	</itemtypes>
+    <itemtypes>
+        <itemtype code="Engine">
+            <deployment table="Engine" typecode="13118"/>
+        </itemtype>
+
+        <itemtype code="Car">
+            <deployment table="Car" typecode="13119"/>
+            <attributes>
+                <attribute qualifier="engine" type="Engine">
+                    <modifiers partof="true"/>
+                    <persistence type="property"/>
+                </attribute>
+            </attributes>
+        </itemtype>
+    </itemtypes>
 </items>
