@@ -6,9 +6,28 @@
 	ATTENTION: This is just an example file. You have to edit it according to your needs.
 -->
 
-<items 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-			xsi:noNamespaceSchemaLocation="items.xsd">
+<items xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="items.xsd">
 
-	<itemtypes>
-	</itemtypes>
+    <itemtypes>
+        <itemtype code="Turtle">
+            <deployment table="Turtle" typecode="13300"/>
+            <attributes>
+                <attribute qualifier="name" type="java.lang.String">
+                    <persistence type="property"/>
+                    <modifiers unique="true" optional="false" initial="true"/>
+                </attribute>
+                <attribute qualifier="location" type="java.lang.String">
+                    <persistence type="property"/>
+                    <modifiers unique="true" optional="false" initial="true"/>
+                </attribute>
+            </attributes>
+            <indexes>
+                <index name="TurtleInx" unique="true">
+                    <key attribute="name"/>
+                    <key attribute="location"/>
+                </index>
+            </indexes>
+        </itemtype>
+    </itemtypes>
 </items>
