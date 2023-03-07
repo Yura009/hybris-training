@@ -6,9 +6,17 @@
 	ATTENTION: This is just an example file. You have to edit it according to your needs.
 -->
 
-<items 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-			xsi:noNamespaceSchemaLocation="items.xsd">
-
-	<itemtypes>
-	</itemtypes>
+<items xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="items.xsd">
+    <relations>
+        <relation code="User2ProductRelation" localized="false">
+            <deployment table="User2Product" typecode="12005"/>
+            <sourceElement qualifier="favoriteProducts" type="Product" cardinality="many">
+                <modifiers read="true" write="true" search="true" optional="true"/>
+            </sourceElement>
+            <targetElement navigable="false" type="User" cardinality="many"/>
+        </relation>
+    </relations>
+    <itemtypes>
+    </itemtypes>
 </items>
