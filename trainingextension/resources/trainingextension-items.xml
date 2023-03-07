@@ -6,9 +6,19 @@
 	ATTENTION: This is just an example file. You have to edit it according to your needs.
 -->
 
-<items 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-			xsi:noNamespaceSchemaLocation="items.xsd">
-
-	<itemtypes>
-	</itemtypes>
+<items xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="items.xsd">
+    <relations>
+        <relation code="Bundle2Product" localized="false">
+            <sourceElement qualifier="bundle" type="ProductBundle" cardinality="one">
+                <modifiers read="true" write="true" search="true" optional="true"/>
+            </sourceElement>
+            <targetElement qualifier="products" type="Product" cardinality="many">
+                <modifiers read="true" write="true" search="true" optional="true"/>
+            </targetElement>
+        </relation>
+    </relations>
+    <itemtypes>
+        <itemtype code="ProductBundle" extends="Product"/>
+    </itemtypes>
 </items>
