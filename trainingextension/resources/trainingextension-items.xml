@@ -6,9 +6,29 @@
 	ATTENTION: This is just an example file. You have to edit it according to your needs.
 -->
 
-<items 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
-			xsi:noNamespaceSchemaLocation="items.xsd">
+<items xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="items.xsd">
 
-	<itemtypes>
-	</itemtypes>
+    <enumtypes>
+        <enumtype code="Planet">
+            <value code="MERCURY"/>
+            <value code="VENUS"/>
+            <value code="EARTH"/>
+            <value code="MARS"/>
+            <value code="JUPITER"/>
+            <value code="SATURN"/>
+            <value code="URANUS"/>
+            <value code="NEPTUNE"/>
+        </enumtype>
+    </enumtypes>
+    <itemtypes>
+        <itemtype code="MyUser" extends="User">
+            <attributes>
+                <attribute qualifier="planet" type="Planet">
+                    <persistence type="property"/>
+                    <defaultvalue>em().getEnumerationValue("Planet","EARTH")</defaultvalue>
+                </attribute>
+            </attributes>
+        </itemtype>
+    </itemtypes>
 </items>
