@@ -1,0 +1,5 @@
+$START_USERRIGHTS
+Type;UID;MemberOfGroups;Password;Target;read
+UserGroup;cockpitgroup;;
+;;;;VariantProduct;-
+$END_USERRIGHTS
