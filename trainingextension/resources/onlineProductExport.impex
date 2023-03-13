@@ -1,0 +1,7 @@
+$catalog=Default
+$version=Online
+$catalogVersion = catalogversion(catalog(id[default = $catalog]), version[default = $version])[unique = true]
+
+insert_update Product; $catalogVersion; code[unique=true]
+"#% impex.exportItems(""SELECT {P:pk} FROM {Product! as P}, {CatalogVersion as CV}, {Catalog as C} WHERE {P:catalogversion}={CV:PK} AND {CV:catalog}={C:PK} AND {C:id}='$catalog' AND {CV:version}='$version'"", Collections.EMPTY_MAP, Collections.singletonList( Item.class ), true, true, -1, -1  );"
+  
