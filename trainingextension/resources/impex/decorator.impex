@@ -1,0 +1,6 @@
+$productCatalog = Default
+$catalogVersion = catalogversion(catalog(id[default=$productCatalog]), version[default='Staged'])[unique=true, default=$productCatalog:Staged]
+
+INSERT_UPDATE Product; code[unique = true][cellDecorator = com.training.decorator.MyDecorator]; $catalogVersion
+                     ; Test product                                                           ;
+
