@@ -1,0 +1,6 @@
+$catalog = Default
+$version = Staged
+$catalogVersion = catalogversion(catalog(id[default = $catalog]), version[default = $version])[unique = true]
+
+UPDATE Product[batchmode = true]; itemType(code)[unique = true]; $catalogVersion; name[lang = en]
+                                ; Product                      ;                ; test
