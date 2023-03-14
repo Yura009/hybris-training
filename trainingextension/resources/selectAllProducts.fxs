@@ -1,0 +1,2 @@
+SELECT { p.name } FROM { Product as p }, { Catalogversion as cv }, { Catalog as c }
+    WHERE { p.code } LIKE '%a%' AND { cv.version } = 'Online' AND { c.id } = 'Default'
