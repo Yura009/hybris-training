@@ -1,0 +1,3 @@
+SELECT CONCAT({ a.firstname },' ',{ a.lastname }) as customerName, COUNT({r.pk}) as replyCount
+    FROM { Address as a }, { Comment as c LEFT JOIN Reply as r ON { r.comment } = { c.pk }}
+    GROUp BY {a.pk}, {a.firstname}, {a.lastname}
