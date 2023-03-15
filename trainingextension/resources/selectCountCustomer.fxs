@@ -1,0 +1,4 @@
+SELECT COUNT(DISTINCT( { c.pk }))
+    FROM { Customer AS c
+        LEFT JOIN Comment AS cc ON { c.pk } = { cc.pk }}
+        WHERE { cc.pk } IS NULL
