@@ -1,0 +1,2 @@
+INSERT Product; code[unique = true]; catalog(id)
+"#% impex.exportItemsFlexibleSearch(""SELECT {p:PK} FROM {Product as p} WHERE {p:description} LIKE '%meat%'"");"
