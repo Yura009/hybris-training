@@ -88,4 +88,8 @@
         <constructor-arg ref="searchRestrictionService"/>
     </bean>
 
+    <bean id="productModelDAO" class="com.training.dao.impl.ProductModelDAOImpl">
+        <constructor-arg value="Product"/>
+    </bean>
+
 </beans>
